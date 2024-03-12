@@ -1,0 +1,7 @@
+#Prop conf
+#Wed Dec 06 00:47:59 CET 2023
+maxRep=25
+maxValue=10
+minRep=10
+minValue=1
+percent=70

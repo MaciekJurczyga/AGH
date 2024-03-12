@@ -1,0 +1,10 @@
+Main version
+file example1.txt
+changes applied
+trello task zadanie5
+chuj
+pies
+kot
+1232
+423
+
