@@ -1,0 +1,8 @@
+/sbin/ifconfig eth0 172.2.2.1 netmask 255.255.255.252 up 
+/sbin/ifconfig eth1 172.1.1.2 netmask 255.255.255.252 up 
+/sbin/ifconfig eth2 172.4.4.1 netmask 255.255.255.252 up 
+/sbin/ifconfig eth3 172.3.3.1 netmask 255.255.255.252 up 
+/sbin/ifconfig lo 127.0.0.1
+chmod a+rw /etc/quagga
+/etc/init.d/zebra start
+/etc/init.d/bgpd start

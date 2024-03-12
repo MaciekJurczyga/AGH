@@ -1,0 +1,8 @@
+/sbin/ifconfig eth0 7.7.1.1 netmask 255.255.255.0 up 
+/sbin/ifconfig eth1 7.7.2.1 netmask 255.255.255.0 up
+/sbin/ifconfig eth2 7.7.118.17 netmask 255.255.255.240 up
+/sbin/ifconfig lo 127.0.0.1
+chmod a+rw /etc/quagga
+/etc/init.d/zebra start
+/etc/init.d/bgpd start
+/etc/init.d/ripd start

@@ -1,0 +1,4 @@
+ifconfig eth0 118.0.1.3 netmask 255.255.255.0 broadcast 118.0.1.255 up
+ifconfig eth1 118.0.2.4 netmask 255.255.255.0 broadcast 118.0.2.255 up
+/etc/init.d/zebra start
+ip link add dummy0 type dummy
