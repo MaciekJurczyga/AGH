@@ -1,6 +1,6 @@
 close all; 
 clear all;
-
+clc;
 %% DANE z instrukcji
 fs  = 8000;     %czestotliwosc probkowania
 t = 0:1/fs:1;
@@ -81,22 +81,47 @@ for j = 1 : length(x4)
 end
 
 %% wykresy
+% Wykres SNR 10dB
 figure(1);
-
 subplot(3,1,1);
-plot(t,dref,t,d,t,y);
-title('AWGN 10dB');
-legend('Sygnal czysty','Zaszumiony','Po odszumieniu');
+plot(t,dref);
+title('Sygna³ czysty - SNR 10dB');
 
 subplot(3,1,2);
-plot(t,dref,t,d2,t,y2);
-title('AWGN 20dB');
-legend('Sygnal czysty','Zaszumiony','Po odszumieniu');
+plot(t,d,'r');
+title('Sygna³ zaszumiony - SNR 10dB');
 
 subplot(3,1,3);
-plot(t,dref,t,d4,t,y4);
-title('AWGN 40dB');
-legend('Sygnal czysty','Zaszumiony','Po odszumieniu');
+plot(t,y,'g');
+title('Sygna³ odszumiony - SNR 10dB');
+
+% Wykres SNR 20dB
+figure(2);
+subplot(3,1,1);
+plot(t,dref);
+title('Sygna³ czysty - SNR 20dB');
+
+subplot(3,1,2);
+plot(t,d2,'r');
+title('Sygna³ zaszumiony - SNR 20dB');
+
+subplot(3,1,3);
+plot(t,y2,'g');
+title('Sygna³ odszumiony - SNR 20dB');
+
+% Wykres SNR 40dB
+figure(3);
+subplot(3,1,1);
+plot(t,dref);
+title('Sygna³ czysty - SNR 40dB');
+
+subplot(3,1,2);
+plot(t,d4,'r');
+title('Sygna³ zaszumiony - SNR 40dB');
+
+subplot(3,1,3);
+plot(t,y4,'g');
+title('Sygna³ odszumiony - SNR 40dB');
 
 %% SNR
 SNR10 = 10*log10((1/fs*sum(dref.^2))/(1/fs*sum((dref-y).^2)));
