@@ -1,3 +1,7 @@
+clear all
+close all
+clc
+
 % Zad. 3
 % zrobione wg. https://www.mathworks.com/help/signal/ref/freqs.html#mw_34730865-ac06-4487-864f-f6bc6ae1d533
 clear all;
@@ -52,8 +56,8 @@ grid;
 title("Odpowiedź częstotliwościowa modelów")
 xlabel("Częstotliwość (kHz)");
 ylabel("Odpowiedź (dB)");
-%rectangle('Position',[0 -45 64 42],'FaceColor','red','LineWidth',0.1,'EdgeColor','k','Visible',true)
-%line([128 128],[5 -40],'LineWidth',0.1,'Visible',true,'Color','k');
+rectangle('Position',[0 -45 64 42],'FaceColor','red','LineWidth',0.1,'EdgeColor','k','Visible',true)
+line([128 128],[5 -90],'LineWidth',0.1,'Visible',true,'Color','red');
 
 legend(["Butter" "Czeby1" "Czeby2" "Elipt"]);
 hold off;

@@ -1,3 +1,6 @@
+clear all
+close all
+clc 
 p12 = -0.5 + 9.5j;
 p34 = -1 + 10j;
 p56 = -0.5 + 10.5j;
@@ -66,7 +69,7 @@ Jest to istotne pojęcie zarówno w teorii filtracji sygnałów, jak i w projekt
 Jakie jest maksymalne i minimalne tłumienie w paśmie zaporowym?
 Maksymalne tłumienie w paśmie zaporowym jest określone przez minimalną wartość transmitancji w tym paśmie.
 Minimalne tłumienie jest zwykle w bezpośrednim sąsiedztwie pasma przepustowego.
-figure 4 :)
+figure 4 
 
 Czy wzmocnienie układu w paśmie przepustowym jest równe 1?
 W przypadku idealnego filtru pasmowo-przepustowego wzmocnienie w paśmie przepustowym wynosi 1.

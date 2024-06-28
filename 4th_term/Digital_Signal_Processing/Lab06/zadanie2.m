@@ -15,11 +15,11 @@ wmax = 2*pi*fmax;
 
 [num_d, den_d] = bilinear(b, a, fs);
 % Wczytanie pliku .wav
-[s, fs] = audioread('sX.wav'); % Zamiast 'sX.wav' wpisz nazwę pliku, który chcesz przefiltrować
+[s, fs] = audioread('s2.wav'); 
 
 % Filtracja sygnału
 filtered_signal = filter(num_d, den_d, s);
-
+% wynik ręcznego dekodowania:  0 6 5 2 3
 % Spektrogram przed filtracją
 figure;
 subplot(2,1,1);

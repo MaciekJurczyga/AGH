@@ -22,7 +22,7 @@ d2 = conv(drefAWGN,hr)'; %sygnal awgn
 x2 = drefAWGN';
 
 %% filtr adaptacyjny ANC - sygnal mowa
-M=256;
+M=16;
 mi=0.04;
 y=[];
 e=[];
@@ -37,7 +37,7 @@ for n=1:length(x)
 end
 
 %% filtr adaptacyjny ANC - sygnal awgn
-M2=256;
+M2=16;
 mi2=0.04;
 y2=[];
 e2=[];

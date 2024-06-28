@@ -1,4 +1,6 @@
-
+clear all
+close all
+clc
 N_values = [2, 4, 6, 8];
 omega_3dB = 2*pi*100; 
 w = 0:0.1:2000;
@@ -24,7 +26,7 @@ end
 figure;
 hold on;
 grid on;
-wlog = logspace(0,2,20001)
+wlog = logspace(0,2,20001);
 for row=1:4
 semilogx(w./(2*pi),Hdec(row,:));
 end

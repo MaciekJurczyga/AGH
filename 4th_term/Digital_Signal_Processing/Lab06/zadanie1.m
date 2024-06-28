@@ -13,9 +13,9 @@ wmax = 2*pi*fmax;
 [b,a] = zp2tf(z,p,k);
 
 
-[num_d, den_d] = bilinear(b, a, fs);
+[num_d, den_d] = bilinear(b, a, fs);  % transofrmata bliniowa
 N = 1024; % liczba punktów w charakterystyce
-[H, w] = freqz(num_d, den_d, N, fs);
+[H, w] = freqz(num_d, den_d, N, fs); %opdowiedź filtru cyfrowego
 % Wykres charakterystyki amplitudowo-częstotliwościowej
 figure;
 plot(w, abs(H));

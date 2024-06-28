@@ -6,7 +6,7 @@ fs = 3.2e6;         % częstotliwość próbkowania
 N  = 32e6;          % liczba próbek (IQ)
 fc = 0.50e6;        % częstotliwość środkowa stacji MF
 
-bwSERV = 80e3;      % szerokość pasma usługi FM (szerokość pasma ~= częstotliwość próbkowania!)
+bwSERV = 80e3;      % szerokość pasma usługi FM (szerokość pasma != częstotliwość próbkowania!)
 bwAUDIO = 16e3;     % szerokość pasma audio FM (szerokość pasma == 1/2 * częstotliwość próbkowania!)
 
 f = fopen('samples_100MHz_fs3200kHz.raw');
@@ -38,7 +38,7 @@ y = atan2(imag(dx), real(dx));
 [b_aa, a_aa] = butter(4, 16e3/(bwSERV/2));
 y = filter(b_aa, a_aa, y);
 
-% Decymacja do szerokości pasma audio bwAUDIO
+% Decymacja do szerokości pasma audio bwAUDIO    
 ym = downsample(y, bwSERV/bwAUDIO);
 
 % De-emfaza (brak kodu w wersji udostępnionej)
@@ -46,7 +46,7 @@ ym = downsample(y, bwSERV/bwAUDIO);
 % Odsłuchaj ostateczny wynik
 ym = ym-mean(ym);
 ym = ym/(1.001*max(abs(ym)));
-% soundsc(ym, bwAUDIO*2);
+soundsc(ym, bwAUDIO*2);
 
 % Charakterystyka czasowo-częstotliwościowa i widmo gęstości mocy oryginalnego sygnału
 figure;
